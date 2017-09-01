@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-
+import { Component, Input} from '@angular/core';
+import { Hero } from './hero';
 @Component({
   selector: 'hero-detail',
   template: `
@@ -10,9 +10,8 @@ import { Component } from '@angular/core';
         <label>name: </label>
         <input [(ngModel)]="hero.name" placeholder="name"/>
       </div>
-    </div>
-  `
+    </div>`
 })
 export class HeroDetailComponent {
-
+  @Input() hero: Hero;
 }
