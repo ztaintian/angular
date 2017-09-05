@@ -1,16 +1,16 @@
 import { Component,OnInit  } from '@angular/core';
-import { Hero } from './hero';
-import { HeroService } from './hero.service';
+import { Hero } from '../hero/hero';
+import { HeroService } from '../hero/hero.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  selector: 'my-heroes',
+  templateUrl: './heroes.component.html',
+  styleUrls: ['./heroes.component.css'],
   providers: [HeroService]
 })
 
 
-export class AppComponent {
+export class HeroesComponent {
   title = 'Tour of Heroes';
   heroes: Hero[];
   selectedHero: Hero;
@@ -21,7 +21,7 @@ export class AppComponent {
   ngOnInit(): void {
     this.getHeroes();
   }
-	onSelect(hero: Hero): void {
-	  this.selectedHero = hero;
-	}  
+  onSelect(hero: Hero): void {
+    this.selectedHero = hero;
+  }  
 }
